@@ -1,0 +1,217 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Paginas web!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer{
+  background-color:black;
+  margin-top:0px;
+  padding: 20px 50px;
+  font-size:15px;
+  color: white;
+  align-content: center;
+
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #2E4053;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+li{
+  color:white;font-size: 20px;
+}
+
+#navbar a:hover {
+  background-color: #D6DBDF;
+  color: #D6DBDF;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar a.active1 {
+  background-color:  #ff9800;
+  color: white;
+}
+#navbar a.active2 {
+  background-color: #f44336;
+  color: white;
+}
+#navbar a.active3 {
+  background-color: #4CAF50;
+  color: white;
+}
+#navbar a.active4 {
+  background-color: #A569BD;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#default"><img src="Logo.png" > </a>
+
+  <dsiv id="navbar-right">
+  
+    <a onclick="clickaction(this)" id="sas"  class="active" href="#home">Inicio</a>
+    <a href=""></a>
+    <a  onclick="clickaction(this)" id="ses" class="active1" href="#Servicios">Servicios</a>
+    <a href=""></a>
+    <a onclick="clickaction(this)" id="sis" class="active2" href="#Acerca">Acerca de nosotros</a>
+    <a href=""></a>
+    <a onclick="clickaction(this)" id="sos" class="active3"  href="#Login">Iniciar sesion</a>
+    <a href=""></a>
+    <a onclick="clickaction(this)"id="xd" class="active4"  href="#Ayuda">Ayuda</a>
+  <script>
+function clickaction( b ){
+      switch( b.id ){
+     case "sas":
+                   $("#navbar").css("background-color", "#2E4053"); 
+                      break;
+     case "ses":
+                   $("#navbar").css("background-color", "#D35400");
+                      break;
+    case "sis":
+                   $("#navbar").css("background-color", "#7B241C");
+                      break;
+    case "sos":
+                    $("#navbar").css("background-color", "#48C9B0");
+                      break;
+    case "xd":
+                      $("#navbar").css("background-color", "#4A235A");
+                      break;                  
+    }}
+</script>
+
+  </div>
+</div>
+
+<div id="home"style="background-color:#2E4053;margin-top:170px;padding:15px 15px 25px;font-size:30px;color: white" >
+
+  <p align="right"><b>Bienvenido a EasyCoders!</b></p>
+
+ 
+<img src="1.png" align="left" >EasyCoders es una pagina web, en la cual hay diseñadores de paginas web aficionados, 
+  medianamente capacitados y enfocados a las nuevas tendencias en diseño de páginas web para cubrir
+   las necesidades minimalistas de los clientes, todo esto a un relativo bajo precio.
+
+
+
+</p>
+</div>
+
+<div id="Servicios" style="background-color:#D35400; margin-top:0px;padding:15px 15px 205px;font-size:30px;color: white">
+
+  <p style="color:white;text-align: center;font-size: 30px;"><b><center>Servicios que ofrece EasyCoders</b> </center><br><br>
+    <img align="right" src="2.png" alt="Error 404" width="500 px" width="500px " style="padding-right: 100px;" >
+    Entre nuestros Servicios tenemos:<br></p>
+ <ul>
+  <li>Asesoramiento en Paginas web</li>
+  <li>Creacion de paginas web</li>
+  <li>Ayuda en la creacion de bases de datos</li>
+  <li>Actualizacion de paginas web</li>
+  </ul>
+  
+</div>
+<div id="Acerca" style="background-color:#7B241C; margin-top:0px;padding:15px 15px 205px;font-size:30px;color: white">
+  <p style="color:white;text-align: center;font-size: 50px;">
+  <b><center>Acerca de EasyCoders</b> </center><br><br></p>
+  <p   style="color:white;font-size: 20px;">
+  EasyCoder es una empresa 100% Mexicana en la que lo mas importante es la comodidad y aprovacion del cliente
+  , es por eso que nos dedicamos a que la pagina de el cliente sea minimalista y limpia.
+</p>
+  </div>
+
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "5px 5px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "40px 5px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+<div id="Ayuda" style="background-color:#4A235A; margin-top:0px;padding:15px 15px 205px;font-size:30px;color: white">
+  <p style="color:white;text-align: center;font-size: 50px;">
+  <b><center>Soporte de EasyCoders</b> </center><br><br>
+  </p>
+  <p   style="color:white;font-size: 20px;">
+    <img align="left" src="3.png" alt="Error 404" width="300 px" width="300px " style="padding-right: 100px;" >
+    Para mas informacion comunicarse a los siguientes numeros:<br><br>
+    449-568-8297<br>
+    449-322-2123<br>
+    449-166-1382<br>
+  </p>
+  </div>
+<div id="footer">
+  Todos los Derechos Reservados, © , 2020-2020
+  Para asesorias o aclaraciones sobre el diseño de páginas web
+  Río Rhin s/n, Colinas del Río, 20010 Aguascalientes, Ags.
+  Horaria de 2:00 pm a 7:00 pm
+
+</div>
+
+
+</body>
+</html>
